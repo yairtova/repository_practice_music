@@ -1,44 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DeezerMusic - Tu música favorita</title>
     <link rel="stylesheet" href="./styles.css">
     <script type="module" src="./main.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="music-player">
-            <nav>
-                <div class="circle">
-                    <span>back</span>
-                </div>
-                <div class="circle">
-                    <span>bars</span>
-                </div>
-            </nav>
-
-            <div id="song-details">
-                <img src="./media/default_img.jpg" alt="" id="song-img">
-                <h1 id="title"></h1>
-                <h3 id="artist"></h3>
+    <header class="main-header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🎵</span>
+                <span class="logo-text">DeezerMusic</span>
             </div>
-
-            <div class="audio">
-                <audio controls id="media" hidden>
-                    <!--<source id="audio" src="" type="audio/mpeg">-->
-                </audio>
-                <input type="range" value="0" id="progress">
-            </div>
-
-            <div class="song-controls">
-                <span id="lastest">last</span>
-                <span id="play" class="play">play</span>
-                <span id="forward">forward</span>
-            </div>
-
         </div>
-    </div>
+        
+        <nav class="main-nav">
+            <a href="#" class="nav-item">Menú</a>
+            <a href="#" class="nav-item">Artistas</a>
+            <a href="#" class="nav-item">Biblioteca</a>
+            <a href="#" class="nav-item">Álbunes top</a>
+        </nav>
+        
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar" class="search-input">
+                <button class="search-btn">🔍</button>
+            </div>
+            <button class="notifications-btn">🔔</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="most-listened">
+            <h2 class="section-title">Tus más escuchadas</h2>
+            <div class="albums-grid">
+                <div class="album-card">
+                    <img src="./media/default_img.jpg" alt="NUEVAYOL" class="album-cover">
+                    <h3 class="album-title">NUEVAYOL</h3>
+                    <p class="album-artist">Bad Bunny</p>
+                </div>
+                <div class="album-card">
+                    <img src="./media/default_img.jpg" alt="Frecuencia" class="album-cover">
+                    <h3 class="album-title">Frecuencia</h3>
+                    <p class="album-artist">Los Dareyes De La Sierra</p>
+                </div>
+                <div class="album-card">
+                    <img src="./media/default_img.jpg" alt="NIMODO QUE NO" class="album-cover">
+                    <h3 class="album-title">NIMODO QUE NO</h3>
+                    <p class="album-artist">Clave Especial x Luis R Conriquez</p>
+                </div>
+                <div class="album-card">
+                    <img src="./media/default_img.jpg" alt="SOLICITADO" class="album-cover">
+                    <h3 class="album-title">SOLICITADO</h3>
+                    <p class="album-artist">Peso Pluma</p>
+                </div>
+                <div class="album-card">
+                    <img src="./media/default_img.jpg" alt="Callaíta" class="album-cover">
+                    <h3 class="album-title">Callaíta</h3>
+                    <p class="album-artist">Bad Bunny</p>
+                </div>
+                <div class="album-card">
+                    <img src="./media/default_img.jpg" alt="Tu sancho" class="album-cover">
+                    <h3 class="album-title">Tu sancho</h3>
+                    <p class="album-artist">Fuerza Regida</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="playlist-section">
+            <h2 class="section-title">Tu lista de reproducción</h2>
+            <div class="playlist-container">
+                <div class="playlist-column">
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Pvta Luna" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Pvta Luna</h4>
+                            <p class="song-artist">Natanael Cano</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Por las noches" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Por las noches</h4>
+                            <p class="song-artist">Junior H</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Farandulitas" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Farandulitas</h4>
+                            <p class="song-artist">TITO DOUBLE P</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="playlist-column">
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Loco" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Loco</h4>
+                            <p class="song-artist">Natanael Cano</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Amor mío" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Amor mío</h4>
+                            <p class="song-artist">Julión Álvarez</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="ME JALO" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">ME JALO</h4>
+                            <p class="song-artist">Fuerza Regida</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="playlist-column">
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Ferrari" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Ferrari</h4>
+                            <p class="song-artist">Peso Pluma</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Según quién" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Según quién</h4>
+                            <p class="song-artist">Banda MS</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                    <div class="song-item">
+                        <img src="./media/default_img.jpg" alt="Ella" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Ella</h4>
+                            <p class="song-artist">Junior H</p>
+                        </div>
+                        <div class="song-actions">
+                            <button class="action-btn">+</button>
+                            <button class="action-btn">⋯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="music-player-footer">
+        <div class="current-song">
+            <img src="./media/default_img.jpg" alt="Canción actual" class="current-song-cover">
+            <div class="current-song-info">
+                <h4 class="current-song-title">NUEVAYOL</h4>
+                <p class="current-song-artist">Bad Bunny</p>
+            </div>
+            <button class="favorite-btn">🎧</button>
+        </div>
+        
+        <div class="player-controls">
+            <div class="control-buttons">
+                <button class="control-btn">🔀</button>
+                <button class="control-btn">⏮️</button>
+                <button class="control-btn play-btn">▶️</button>
+                <button class="control-btn">⏭️</button>
+                <button class="control-btn">🔁</button>
+            </div>
+            <div class="progress-container">
+                <span class="time-current">0:00</span>
+                <input type="range" class="progress-bar" value="0" max="100">
+                <span class="time-total">3:45</span>
+            </div>
+        </div>
+        
+        <div class="volume-controls">
+            <button class="volume-btn">🔊</button>
+            <input type="range" class="volume-slider" value="50" max="100">
+            <button class="playlist-btn">📋</button>
+        </div>
+        
+        <audio id="audio-player" hidden>
+            <source src="./media/song.mp3" type="audio/mpeg">
+        </audio>
+    </footer>
 </body>
 </html>
